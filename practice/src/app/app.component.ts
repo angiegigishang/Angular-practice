@@ -1,26 +1,13 @@
 import { Component } from '@angular/core';
-
-interface TopMenu {
-  title: string;
-  readonly link: string;
-}
-
-interface AddFunc {
-  (x: number, y: number): number; 
-}
-
-interface Dict {
-  [key: string]: string;
-}
-
+import { TopMenu } from './components';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-practice';
-  menus: TopMenu[] = [
+  scrollableTabBgColor = 'red';
+  topMenus: TopMenu[] = [
     {
       title: '热门',
       link: ''
@@ -90,15 +77,18 @@ export class AppComponent {
       link: ''
     }
   ];
+  topMenus2: TopMenu[] = [
+    {
+      title: '测试一下',
+      link: ''
+    }
+  ]
+  constructor() {}
 
-  add: AddFunc = (x, y) => x + y;
-
-  dict: Dict = {
-    a: '1',
-    b: '2'
-  }
-
-  constructor() {
-     console.log(this.dict['a'])
+  handleTabSelected(tabMenu: TopMenu) {
+    const colors = ['red', 'blue', 'black'];
+    const idx = Math.floor(Math.random() * 3);
+    this.scrollableTabBgColor = colors[idx];
+    console.log('topMenus');
   }
 }
