@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu } from './components';
+import { TopMenu, ImageSlider } from './components';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -77,12 +77,34 @@ export class AppComponent {
       link: ''
     }
   ];
-  topMenus2: TopMenu[] = [
+
+  imageSliders: ImageSlider[] = [
     {
-      title: '测试一下',
-      link: ''
+      imgUrl:
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9e66e9d1e25726cc0dcb6b743e5b388b.png?thumb=1&w=2452&h=920&f=webp&q=90',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7b96c73fd25ec69532a0384c56353458.jpg?w=2452&h=920',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1995da1db2423f7876b9b94de748e16f.jpg?thumb=1&w=2452&h=920&f=webp&q=90',
+      link: '',
+      caption: ''
+    },
+    {
+      imgUrl:
+        'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7b96c73fd25ec69532a0384c56353458.jpg?w=2452&h=920',
+      link: '',
+      caption: ''
     }
-  ]
+  ];
+
   constructor() {}
 
   handleTabSelected(tabMenu: TopMenu) {
