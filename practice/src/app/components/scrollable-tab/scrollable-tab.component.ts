@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 
 export interface TopMenu {
@@ -16,6 +16,7 @@ export class ScrollableTabComponent implements OnInit,
                                                AfterContentInit,
                                                AfterViewInit,
                                                AfterViewChecked,
+                                               OnDestroy,
                                                AfterContentChecked {
 
   selectedIndex = -1;
@@ -53,6 +54,10 @@ export class ScrollableTabComponent implements OnInit,
 
   ngAfterViewChecked(): void {
     console.log('ngafterviewchecked')
+  }
+
+  ngOnDestroy(): void {
+    console.log('destroy')
   }
 
   handleSelection(index: number) {

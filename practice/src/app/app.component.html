@@ -3,6 +3,7 @@
                     titleColor="#fff"
                     titleActiveColor="yellow"
                     indicatorColor="yellow"
+                    *ngIf="scrollableTabBgColor === 'red' "
                     (tabSelected)="handleTabSelected($event)">
     <div>test after init</div>
 </app-scrollable-tab>
