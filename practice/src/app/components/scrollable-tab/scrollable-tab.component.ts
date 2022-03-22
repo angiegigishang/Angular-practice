@@ -1,4 +1,9 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, 
+         OnInit, 
+         Input, 
+         Output, 
+         EventEmitter, 
+       } from '@angular/core';
 
 
 export interface TopMenu {
@@ -11,18 +16,12 @@ export interface TopMenu {
   templateUrl: './scrollable-tab.component.html',
   styleUrls: ['./scrollable-tab.component.css']
 })
-export class ScrollableTabComponent implements OnInit, 
-                                               OnChanges, 
-                                               AfterContentInit,
-                                               AfterViewInit,
-                                               AfterViewChecked,
-                                               OnDestroy,
-                                               AfterContentChecked {
+export class ScrollableTabComponent implements OnInit {
 
   selectedIndex = -1;
   title = 'angular-practice';
   @Input() menus: TopMenu[] = [];
-  @Input() backgroundColor = 'white';
+  @Input() backgroundColor = 'blue';
   @Input() titleActivColor = 'yellow';
   @Input() titleColor = 'blue';
   @Input() indicatorColor = 'pink';
@@ -30,34 +29,10 @@ export class ScrollableTabComponent implements OnInit,
 
   constructor() { 
     console.log('constructor');
-   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges', changes);
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit')
-  }
-
-  ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
-  }
-
-  ngAfterContentChecked():void {
-    console.log('ngAfterContentChecked')
-  }
-
-  ngAfterViewInit(): void {
-    console.log('ngafterviewinit')
-  }
-
-  ngAfterViewChecked(): void {
-    console.log('ngafterviewchecked')
-  }
-
-  ngOnDestroy(): void {
-    console.log('destroy')
+      
   }
 
   handleSelection(index: number) {
