@@ -16,5 +16,5 @@
        [value]="username" 
        (input)="username = $event.target.value"
 />
-<span>hello, {{username}}</span>
+<p (click)="handleClick()">hello, {{username}}</p>
 {{result}}
