@@ -12,5 +12,10 @@
 
 <!-- <input type="text" [ngModel]="username" (ngModelChange)="username = $event"/>
 <span>hello, {{username}}</span> -->
-<input type="text"/>
+<!-- <input type="text"/>
 <p>hello</p>
+<div appGridItem></div> -->
+<div appGridItem *ngFor="let item of channels">
+       <img src="{{item.icon}}" alt="" appGridItemImage/>
+       <span appGridItemTitle>{{item.title}}</span>
+</div>

@@ -106,8 +106,6 @@ export class AppComponent {
     }
   ];
 
-  username = '';
-
   constructor() {}
 
   handleTabSelected(tabMenu: TopMenu) {
