@@ -5,7 +5,7 @@
               let odd = odd;
               "
       [ngClass]="{ 'even': even, 'odd': odd }">
-    <a href="#"
+    <a
        [ngStyle]="{color: i === selectedIndex ? titleActivColor : titleColor}"
        (click)="handleSelection(i)"
     >

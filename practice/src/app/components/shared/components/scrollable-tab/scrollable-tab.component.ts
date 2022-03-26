@@ -7,6 +7,7 @@ import { Component,
 
 
 export interface TopMenu {
+  id: number;
   title: string;
   readonly link: string;
 }
