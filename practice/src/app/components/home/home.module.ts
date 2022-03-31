@@ -3,7 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { HomeContainerComponent, HomeGrandComponent } from './components';
+import { HomeContainerComponent, 
+         HomeGrandComponent,
+         ParentComponent,
+         ChildComponent } from './components';
 import { HomeDetailComponent } from './components/home-detail/home-detail.component';
 import { HomeService, token } from './services';
 
@@ -13,7 +16,9 @@ import { HomeService, token } from './services';
   declarations: [
     HomeContainerComponent,
     HomeDetailComponent,
-    HomeGrandComponent
+    HomeGrandComponent,
+    ParentComponent,
+    ChildComponent
   ],
   providers: [
     HomeService,

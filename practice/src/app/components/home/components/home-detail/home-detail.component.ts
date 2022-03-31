@@ -19,11 +19,14 @@ export class HomeDetailComponent implements OnInit {
     this.imageSliders = this.service.getBanners();
     this.channels = this.service.getChannels();
 
+
     this.route.paramMap.subscribe(params => {
       console.log('params', params);
-      this.selectedTabLink = this.route.snapshot.paramMap.get('tabLink');
+      this.selectedTabLink = params.get('tablink');
       console.log('selected', this.selectedTabLink);
     })
+    
+    
     
     
     this.route.queryParamMap.subscribe(params => {
